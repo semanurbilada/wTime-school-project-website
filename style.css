@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    scroll-behavior: smooth;
+    font-family: Poppins;
+}
+
+:root{
+    --bg: rgb(102, 102, 237, 0.3);
+    --navbar: rgb(102, 102, 237, 0.7);
+    --text: rgb(102, 102, 237);
+}
+
+body{
+    background-color: var(--bg);
+}
+
+header{
+    background-color: var(--navbar);
+    width: 100%;
+    height: auto;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+} 
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 25px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+nav{
+    display: flex;
+    gap: 25px;
+    margin: 25px;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav li a{
+    color: white;
+    text-decoration: none;
+    transition: width 2s;
+}
+
+nav li a:before{
+    content: "";
+    width: 0px;
+    height: 1.5px;
+    background-color: white;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+nav li a:hover:before,
+nav li a:focus:before{
+    width: 100%;
+}
+
+.search-bar input{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 25px;
+}
+
+main{
+    
+    height: 100vh;
+}
