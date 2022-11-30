@@ -8,7 +8,7 @@
 
     <title>wTime | what TIME is it?</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
 
@@ -17,31 +17,33 @@
     <header>
         <div class="container">
             <div class="logo">
-                <ion-icon name="time-outline"></ion-icon>
-                wTime
+                <a href="index.html">
+                    <ion-icon name="time-outline"></ion-icon>
+                    wTime
+                </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="#">CLOCKS</a></li>
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
                 <div class="search-bar">
-                    <input type="text" class="search" name="txt" placeholder="Type a country">
+                    <input type="text" name="txt" placeholder="Type a Country">
                 </div>
             </nav>
         </div>
     </header>
 
 
-    <main class="home">
-        <h1>What TIME is it?</h1>
-
-        <div class="clock" id="currentClock" onload="currentTime()">
-            <script src= "index.js"></script>
+    <section class="home">
+        <h1>What TIME ?!!!</h1>
+        <div class="currentClock" id="currentClock" onload="currentTime()">
+            <script class="current" src= "js/index.js"></script>
         </div>
-    </main>
+    </section>
+
 
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
