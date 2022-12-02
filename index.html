@@ -12,7 +12,7 @@
 </head>
 
 
-<body>
+<body id="bgDark">
 
     <header>
         <div class="container">
@@ -25,12 +25,12 @@
             <nav>
                 <ul>
                     <li><a href="./index.html" class="active">HOME</a></li>
-                    <li><a href="#">CLOCKS</a></li>
+                    <li><a href="#clocks">CLOCKS</a></li>
+                    <li><a href="#">INFO</a></li>
                     <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">CONTACT</a></li>
                 </ul>
                 <div class="search-bar">
-                    <input type="text" name="txt" placeholder="Type a Country">
+                    <input type="text" name="txt" placeholder="Type a City/Country">
                 </div>
             </nav>
         </div>
@@ -38,9 +38,53 @@
 
 
     <section class="home">
-        <h1>What TIME is it ?</h1>
-        <div class="currentClock" id="currentClock" onload="currentTime()">
-            <script class="current" src= "js/index.js"></script>
+        <h1>What TIME is it?</h1>
+        <h2>Your exact time, now:</h2>
+        <div class="current-time" id="currentClock" onload="currentTime()">
+            <script src= "js/index.js"></script>
+        </div>
+    </section>
+
+
+    <section class="box" id="clocks">
+        <div class="box-item">
+            <p>LONDON</p>
+        </div>
+        <!--   
+        <div class="popup-london" id="london">
+            <div class="title">
+                <ion-icon name="close-outline"></ion-icon>
+                <img src="images/london.jpg" alt="">
+                <p>London / United Kindom</p>
+            </div>
+        </div>
+        -->
+        <div class="box-item">
+            <p>PARIS</p>
+        </div>
+        <div class="box-item">
+            <p>DUBAI</p>
+        </div>
+        <div class="box-item">
+            <p>NEW YORK</p>
+        </div>
+        <div class="box-item">
+            <p>SEUL</p>
+        </div>
+        <div class="box-item">
+            <p>ISTANBUL</p>
+        </div>
+        <div class="box-item">
+            <p>TOKYO</p>
+        </div>
+        <div class="box-item">
+            <p>SINGAPUR</p>
+        </div>
+        <div class="box-item">
+            <p>NORWAY</p>
+        </div>
+        <div class="box-item">
+            <p>NETHERLANDS</p>
         </div>
     </section>
 

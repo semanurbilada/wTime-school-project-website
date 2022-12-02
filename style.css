@@ -11,10 +11,12 @@
 }
 
 :root{
-    --bg: rgb(102, 102, 237, 0.3);
-    --navbar: rgb(102, 102, 237, 0.7);
+    --bg: rgba(102, 102, 237, 0.3);
+    --bg2: rgba(102, 102, 237, 0.4);
+    --navbar: rgba(102, 102, 237, 0.7);
     --text: rgba(53, 53, 131, 0.7);
-    --hover: rgb(102, 39, 178, 0.6);
+    --hover: rgba(102, 39, 178, 0.6);
+    --border: rgb(46, 39, 108);
 }
 
 html{
@@ -23,19 +25,20 @@ html{
     scrollbar-color: var(--navbar);
 }
 
-html::-webkit-scrollbar {
+html::-webkit-scrollbar{
     width: .5rem;
 }
 
-html::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track{
     background-color: var(--bg);
 }
 
 
-html::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb{
     background-color: var(--navbar);
 }
 
+/* NAVBAR */
 header{
     background-color: var(--navbar);
     width: 100%;
@@ -77,7 +80,7 @@ nav{
 nav ul{
     display: flex;
     gap: 40px;
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
 nav ul li{
@@ -93,7 +96,7 @@ nav li a{
 nav li a:before{
     content: "";
     width: 0px;
-    height: 1.5px;
+    height: 2px;
     background-color: white;
     display: block;
     transition: all .3s ease-in-out;
@@ -115,30 +118,79 @@ nav li a:hover{
     border-radius: 25px;
 }
 
+/* HOME PAGE */
 .home{
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 50%; 
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100vh;
     cursor: default;
     color: white;
-    font-size: 50px;
-    letter-spacing: 3px;
+    font-size: 45px;
+    letter-spacing: 1px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 } 
 
+.current-time{
+    /*
+    border: solid 3px var(--border);
+    border-width: 20px;*/
+    font-family: Orbitron;
+    font-size: 130px;
+    letter-spacing: 9px;
+}
+
 .home h1:hover,
-.currentClock:hover{
+.home h2:hover,
+.current-time:hover{
     color: var(--navbar);
     transition: all .3s ease-in-out;
 }
 
-.currentClock{
-    font-family: Orbitron;
-    font-size: 110px;
-    letter-spacing: 7px;
+/* CLOCKS */
+.box{
+    padding: 80px;  
+    margin-top: 800px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
+
+.box-item{
+    border: solid var(--border);
+    border-width: 3px;
+    padding: 10px;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
+    cursor: pointer;
+}
+
+.box-item:hover{
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+}
+
+.box-item p{
+    color: var(--border);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.box-item p:hover{
+    font-size: 33px;
+    transition: all .2s ease-in-out;
+}
+
+
+
+/* FOOTER */
+/*
+.footer{
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}*/
