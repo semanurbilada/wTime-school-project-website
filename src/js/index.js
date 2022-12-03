@@ -45,6 +45,7 @@ console.log(londonTimeNow);
 londonTime();
 
 
+
 function dubaiTime() { 
 /* 
 const d = new Date();

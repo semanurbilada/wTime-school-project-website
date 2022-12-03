@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Semanur Bilada">
 
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- scrollreveal library -->
     <title>wTime | what TIME is it?</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
-
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- scrollreveal library -->
 </head>
 
 
@@ -43,19 +42,12 @@
         <h1>What TIME is it?</h1>
         <h2>Your exact time, now:</h2>
         <div class="current-time" id="currentClock" onload="currentTime()">
-            <script src= "js/index.js"></script>
+            <script src= "./src/js/index.js"></script>
         </div>
     </section>
 
-    <!-- 
-    <section class="search-bar-fixed">
-        <input type="text" name="txt" placeholder="Type a City/Country">
-    </section>
-    -->
-
-
+    
     <section class="box" id="clocks">
-        <!-- <script src="./js/scrollReveal.js"></script> -->
         <div class="box-item move1">
             <p>LONDON</p>
         </div>
@@ -97,26 +89,20 @@
         </div>
     </section>
 
+    <!-- 
+    <section class="search-bar-fixed">
+        <input type="text" name="txt" placeholder="Type a City/Country">
+    </section>
+    -->
+
+
+    <!--scrollreveal.js library-->
+    <script src="./src/js/scrollReveal.js"></script>
+
 
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-    <script>
-        ScrollReveal().reveal('.move1',{delay:250});
-        ScrollReveal().reveal('.move2',{delay:500});
-        ScrollReveal().reveal('.move3',{delay:750});
-        ScrollReveal().reveal('.move4',{delay:1000});
-        ScrollReveal().reveal('.move5',{delay:1250});
-        ScrollReveal().reveal('.move6',{delay:1500});
-        ScrollReveal().reveal('.move7',{delay:1750});
-        ScrollReveal().reveal('.move8',{delay:2000});
-        ScrollReveal().reveal('.move9',{delay:2250});
-        ScrollReveal().reveal('.move10',{delay:2500});
-
-        //ScrollReveal().reveal('.search-bar-fixed', {delay:600});
-    </script>
     
     
 </body>
