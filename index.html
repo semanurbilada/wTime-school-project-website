@@ -9,6 +9,8 @@
     <title>wTime | what TIME is it?</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- scrollreveal library -->
 </head>
 
 
@@ -45,9 +47,16 @@
         </div>
     </section>
 
+    <!-- 
+    <section class="search-bar-fixed">
+        <input type="text" name="txt" placeholder="Type a City/Country">
+    </section>
+    -->
+
 
     <section class="box" id="clocks">
-        <div class="box-item">
+        <!-- <script src="./js/scrollReveal.js"></script> -->
+        <div class="box-item move1">
             <p>LONDON</p>
         </div>
         <!--   
@@ -59,31 +68,31 @@
             </div>
         </div>
         -->
-        <div class="box-item">
+        <div class="box-item move2">
             <p>PARIS</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move3">
             <p>DUBAI</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move4">
             <p>NEW YORK</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move5">
             <p>SEUL</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move6">
             <p>ISTANBUL</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move7">
             <p>TOKYO</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move8">
             <p>SINGAPUR</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move9">
             <p>NORWAY</p>
         </div>
-        <div class="box-item">
+        <div class="box-item move10">
             <p>NETHERLANDS</p>
         </div>
     </section>
@@ -92,6 +101,22 @@
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    <script>
+        ScrollReveal().reveal('.move1',{delay:250});
+        ScrollReveal().reveal('.move2',{delay:500});
+        ScrollReveal().reveal('.move3',{delay:750});
+        ScrollReveal().reveal('.move4',{delay:1000});
+        ScrollReveal().reveal('.move5',{delay:1250});
+        ScrollReveal().reveal('.move6',{delay:1500});
+        ScrollReveal().reveal('.move7',{delay:1750});
+        ScrollReveal().reveal('.move8',{delay:2000});
+        ScrollReveal().reveal('.move9',{delay:2250});
+        ScrollReveal().reveal('.move10',{delay:2500});
+
+        //ScrollReveal().reveal('.search-bar-fixed', {delay:600});
+    </script>
     
     
 </body>

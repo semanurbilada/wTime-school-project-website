@@ -141,15 +141,28 @@ nav li a:hover{
     border-width: 20px;*/
     font-family: Orbitron;
     font-size: 130px;
+    color: var(--navbar);
     letter-spacing: 9px;
 }
 
 .home h1:hover,
-.home h2:hover,
-.current-time:hover{
+.home h2:hover{
     color: var(--navbar);
     transition: all .3s ease-in-out;
 }
+/*
+/* FIXED ELEMENT 
+.search-bar-fixed input{
+    position: fixed;
+    z-index: 50;
+    bottom: 25px;
+    left: 20px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 25px;
+} */
 
 /* CLOCKS */
 .box{
