@@ -59,12 +59,12 @@ header{
     display: flex;
     align-items: center;
     gap: 2px;
-    margin: 28px;
+    margin: 38px;
     cursor: pointer;
     font-size: 32px;
     color: white;
     text-decoration: none;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
 .logo a:hover{
@@ -73,6 +73,7 @@ header{
 
 nav{
     display: flex;
+    align-items: center;
     gap: 25px;
     margin: 25px;
 }
@@ -112,7 +113,7 @@ nav li a:hover{
 
 .search-bar input{
     width: 200px;
-    height: 30px;
+    height: 35px;
     text-align: center;
     font-size: 15px;
     border-radius: 25px;
@@ -178,6 +179,7 @@ nav li a:hover{
 .box-item{
     border: solid var(--border);
     border-width: 3px;
+    border-radius: 5px;
     padding: 10px;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
     cursor: pointer;
