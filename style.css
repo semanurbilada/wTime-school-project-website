@@ -168,8 +168,9 @@ nav li a:hover{
 /* CLOCKS */
 .box{
     padding: 80px;  
-    margin-top: 800px;
-    margin-bottom: 200px;
+    margin-top: 500px;
+    height: 90vh;
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
