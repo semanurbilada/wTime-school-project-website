@@ -36,16 +36,16 @@ header{
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
 } 
 
 .logo a{
     display: flex;
     align-items: center;
     gap: 2px;
-    margin: 38px;
+    margin: 40px;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 34px;
     color: white;
     text-decoration: none;
     transition: 0.4s;
@@ -75,24 +75,11 @@ nav ul li{
 nav li a{
     color: white;
     text-decoration: none;
-    transition: width 2s;
-}
-
-nav li a:before{
-    content: "";
-    width: 0px;
-    height: 2px;
-    background-color: white;
-    display: block;
-    transition: all .3s ease-in-out;
-}
-
-nav li a:hover:before{
-    width: 100%;
+    transition: 0.35s;
 }
 
 nav li a:hover{
-    width: 100%;
+    color: var(--border);
 }
 
 .search-bar input{
@@ -108,6 +95,7 @@ nav li a:hover{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    text-align: center;
 }
 
 .home h1{
@@ -137,7 +125,7 @@ nav li a:hover{
     transform: translateY(-3px); 
 }
 
-.stick {
+.hand {
     width: 50%;
     height: 6px;
     background: var(--text);
@@ -182,29 +170,22 @@ nav li a:hover{
     padding: 10px;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
     cursor: pointer;
-}
-
-.box-item p{
     color: var(--border);
     font-size: 22px;
+    transition: 0.2s;
 }
 
 .box-item:hover{
-    box-shadow: 25px 50px 100px -24px rgb(0 0 0 / 0.5);
+    border: 5px solid var(--border);
+    box-shadow: 25px 50px 100px -24px;
 }
-
-.box-item p:hover{
-    font-size: 30px;
-    transition: all .2s ease-in-out;
-}
-
 
 
 
 /* FOOTER */
 /*
 .footer{
-    background-image: url(images/bg.jpg);
+    background-image: url(./src/images/bg.jpg);
     background-size: cover;
     background-attachment: fixed;
 }*/

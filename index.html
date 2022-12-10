@@ -25,7 +25,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html" class="active">HOME</a></li>
+                    <li><a href="index.html" class="active">HOME</a></li>
                     <li><a href="#clocks">CLOCKS</a></li>
                     <li><a href="#">INFO</a></li>
                     <li><a href="#">ABOUT US</a></li>
@@ -40,20 +40,24 @@
 
     <main class="home">
         <div class="container">
-            <h1>What time is it?<br>Your exact time, now:</h1>
-    
+            <div class="current-date">
+                <h1>Your exact time, now:</h1>
+                <div class="date"></div>
+                <div class="day"></div>
+            </div>
+
             <div class="current-clock">
                 <div class="current-clock-face">
-                  <div class="stick hour"></div>
-                  <div class="stick minute"></div>
-                  <div class="stick second"></div>
+                  <div class="hand hour-hand"></div>
+                  <div class="hand min-hand"></div>
+                  <div class="hand second-hand"></div>
                 </div>
             </div>
         </div>
     </main>
 
 
-    <section class="box" id="clocks">
+    <section class="box" id="clocks"> 
         <div class="box-item move1">
             <p>LONDON</p>
         </div>
@@ -80,7 +84,7 @@
         </div>
         <div class="box-item move9">
             <p>NORWAY</p>
-        </div>
+        </div> 
         <div class="box-item move10">
             <p>NETHERLANDS</p>
         </div>
@@ -91,7 +95,7 @@
             <p>ROME</p>
         </div>
         <div class="box-item move13">
-            <p>GERMAN</p>
+            <p>GERMANY</p>
         </div>
         <div class="box-item move14">
             <p>LOS ANGELES</p>
