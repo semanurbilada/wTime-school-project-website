@@ -8,12 +8,12 @@
 
     <title>wTime | what TIME is it?</title>
     <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script> <!-- scrollreveal library -->
 </head>
 
 
-<body id="bgDark">
+<body>
 
     <header>
         <div class="container">
@@ -38,15 +38,21 @@
     </header>
 
 
-    <section class="home">
-        <h1>What TIME is it?</h1>
-        <h2>Your exact time, now:</h2>
-        <div class="current-time" id="currentClock" onload="currentTime()">
-            <script src= "./src/js/index.js"></script>
+    <main class="home">
+        <div class="container">
+            <h1>What time is it?<br>Your exact time, now:</h1>
+    
+            <div class="current-clock">
+                <div class="current-clock-face">
+                  <div class="stick hour"></div>
+                  <div class="stick minute"></div>
+                  <div class="stick second"></div>
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
 
-   
+
     <section class="box" id="clocks">
         <div class="box-item move1">
             <p>LONDON</p>
@@ -61,7 +67,7 @@
             <p>NEW YORK</p>
         </div>
         <div class="box-item move5">
-            <p>SEUL</p>
+            <p>SEOUL</p>
         </div>
         <div class="box-item move6">
             <p>ISTANBUL</p>
@@ -70,7 +76,7 @@
             <p>TOKYO</p>
         </div>
         <div class="box-item move8">
-            <p>SINGAPUR</p>
+            <p>SINGAPORE</p>
         </div>
         <div class="box-item move9">
             <p>NORWAY</p>
@@ -78,44 +84,26 @@
         <div class="box-item move10">
             <p>NETHERLANDS</p>
         </div>
-    </section>
-
-
-    <section class="clocks-popup">
-        <div class="popup" id="london">
-            <div class="title">
-                <ion-icon name="close-outline"></ion-icon>
-                <!-- <img src="./src/images/london.jpg" alt=""> -->
-                <p>London / United Kindom</p>
-            </div>
+        <div class="box-item move11">
+            <p>SAN FRANCISCO</p>
         </div>
-
-        <div class="popup" id="paris">
-            <div class="title">
-                <ion-icon name="close-outline"></ion-icon>
-                <p>Paris / France</p>
-            </div>
+        <div class="box-item move12">
+            <p>ROME</p>
         </div>
-
-        <div class="popup" id="dubai">
-            <div class="title">
-                <ion-icon name="close-outline"></ion-icon>
-                <p>Dubai</p>
-            </div>
+        <div class="box-item move13">
+            <p>GERMAN</p>
         </div>
-
-        <div class="popup" id="new-york">
-            <div class="title">
-                <ion-icon name="close-outline"></ion-icon>
-                <p>New York / United States</p>
-            </div>
+        <div class="box-item move14">
+            <p>LOS ANGELES</p>
         </div>
-
-        <div class="popup" id="seul">
-            <div class="title">
-                <ion-icon name="close-outline"></ion-icon>
-                <p>Seul / Korea</p>
-            </div>
+        <div class="box-item move15">
+            <p>ANKARA</p>
+        </div>
+        <div class="box-item move16">
+            <p>TORONTO</p>
+        </div>
+        <div class="box-item move17">
+            <p>MOSCOW</p>
         </div>
     </section>
 
@@ -126,14 +114,17 @@
     -->
 
 
+    <!--Js-->
     <!--scrollreveal.js library-->
-    <script src="./src/js/scrollReveal.js"></script>
+    <script src="./src/js/scrollReveal.js"></script> 
 
+    <!--current time-->
+    <script src="./src/js/index.js"></script>
 
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
-    
+
+
 </body>
 </html>
