@@ -2,9 +2,13 @@ const secondHand = document.querySelector('.second-hand');
 const minsHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
 
+const currentDay = document.querySelector('.day');
+const currentDate = document.querySelector('.date');
+
 function setDate() {
     const now = new Date();
-    
+    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
     const seconds = now.getSeconds();
     const secondsDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -16,6 +20,17 @@ function setDate() {
     const hour = now.getHours();
     const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+    const date = now.getDate();
+    const month = now.getMonth() + 1;
+    const year = now.getFullYear(); 
+    
+    let day = weekdays[now.getDay()];
+
+    if(month < 9) { month = "0" + month; }
+
+    currentDate.innerHTML = date + "/" + month + "/" + year;
+    currentDay.innerHTML = day;
 }
 
 setInterval(setDate, 1000);
@@ -51,37 +66,3 @@ function currentTime() {
 }
 currentTime(); 
 */
-
-
-/*
-function londonTime() {
-    constd = new Date();
-    const localTime = d.getTime();
-    const localOffset = d.getTimezoneOffset() * 60000;
-
-    const utc = localTime + localOffset;
-    const offset = 0; //London's UTC : +00.00
-    const london = utc + (3600000 * offset);
-
-    const londonTimeNow = new Date(london).toLocaleString();
-    console.log(londonTimeNow);
-
-}
-londonTime();
-
-*/
-/* 
-function dubaiTime() { 
-
-const d = new Date();
-const localTime = d.getTime();
-const localOffset = d.getTimezoneOffset() * 60000;
- 
-const utc = localTime + localOffset;
-const offset = 4; //Dubai's UTC : +00.00
-const dubai = utc + (3600000 * offset);
- 
-const dubaiTimeNow = new Date(dubai).toLocaleString();
-console.log(dubaiTimeNow);
-}
-dubaiTime(); */
