@@ -52,6 +52,8 @@ header{
 }
 
 .logo a:hover{
+    color: var(--border);
+    font-weight: bold;
     transform: scale(0.9);
 }
 
@@ -90,6 +92,21 @@ nav li a:hover{
     border-radius: 25px;
 }
 
+.list{
+    background-color: white;
+    border-radius: 20px;
+    padding: 12px;
+    width: fit-content;
+    list-style: none;
+    position: absolute;
+    right: 3px;
+    top: 100px; 
+}
+
+.city-country a{
+    text-decoration: none;
+}
+
 /* HOME */
 .home{
     display: flex;
@@ -101,6 +118,7 @@ nav li a:hover{
 .home h1{
     margin: 0 150px 0 100px;
     font-size: 50px;
+    color: var(--text);
 }
 
 .current-clock {
@@ -170,9 +188,13 @@ nav li a:hover{
     padding: 10px;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.box-item p a{
+    text-decoration: none;
     color: var(--border);
     font-size: 22px;
-    transition: 0.2s;
 }
 
 .box-item:hover{

@@ -31,11 +31,18 @@
                     <li><a href="#">ABOUT US</a></li>
                 </ul>
                 <div class="search-bar">
-                    <input type="text" name="txt" placeholder="CITY / COUNTRY">
+                    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="CITY / COUNTRY">
                 </div>
             </nav>
         </div>
     </header>
+
+    <ul class="list"> 
+        <li class="city-country"><a href="#">London / United Kingdom</a></li> 
+        <li class="city-country"><a href="#">Dubai / United Arab Emirates</a></li>
+        <li class="city-country"><a href="#">Paris / France</a></li>
+        <li class="city-country"><a href="#">Tokyo / Japan</a></li>
+    </ul>
 
 
     <main class="home">
@@ -59,59 +66,59 @@
 
     <section class="box" id="clocks"> 
         <div class="box-item move1">
-            <p>LONDON</p>
+            <p><a href="#">LONDON</a></p>
         </div>
         <div class="box-item move2">
-            <p>PARIS</p>
+            <p><a href="#">PARIS</a></p>
         </div>
         <div class="box-item move3">
-            <p>DUBAI</p>
+            <p><a href="#">DUBAI</a></p>
         </div>
         <div class="box-item move4">
-            <p>NEW YORK</p>
+            <p><a href="#">NEW YORK</a></p>
         </div>
         <div class="box-item move5">
-            <p>SEOUL</p>
+            <p><a href="#">SEOUL</a></p>
         </div>
         <div class="box-item move6">
-            <p>ISTANBUL</p>
+            <p><a href="#">ISTANBUL</a></p>
         </div>
         <div class="box-item move7">
-            <p>TOKYO</p>
+            <p><a href="#">TOKYO</a></p>
         </div>
         <div class="box-item move8">
-            <p>SINGAPORE</p>
+            <p><a href="#">SINGAPORE</a></p>
         </div>
         <div class="box-item move9">
-            <p>NORWAY</p>
+            <p><a href="#">OSLO</a></p>
         </div> 
         <div class="box-item move10">
-            <p>NETHERLANDS</p>
+            <p><a href="#">AMSTERDAM</a></p>
         </div>
         <div class="box-item move11">
-            <p>SAN FRANCISCO</p>
+            <p><a href="#">SAN FRANCISCO</a></p>
         </div>
         <div class="box-item move12">
-            <p>ROME</p>
+            <p><a href="#">ROME</a></p>
         </div>
         <div class="box-item move13">
-            <p>GERMANY</p>
+            <p><a href="#">BERLIN</a></p>
         </div>
         <div class="box-item move14">
-            <p>LOS ANGELES</p>
+            <p><a href="#">LOS ANGELES</a></p>
         </div>
         <div class="box-item move15">
-            <p>ANKARA</p>
+            <p><a href="#">ANKARA</a></p>
         </div>
         <div class="box-item move16">
-            <p>TORONTO</p>
+            <p><a href="#">TORONTO</a></p>
         </div>
         <div class="box-item move17">
-            <p>MOSCOW</p>
+            <p><a href="#">MOSCOW</a></p>
         </div>
     </section>
 
-    <!-- 
+    <!--
     <section class="search-bar-fixed">
         <input type="text" name="txt" placeholder="CITY / COUNTRY">
     </section>
@@ -119,11 +126,14 @@
 
 
     <!--Js-->
-    <!--scrollreveal.js library-->
-    <script src="./src/js/scrollReveal.js"></script> 
-
     <!--current time-->
     <script src="./src/js/index.js"></script>
+
+    <!--search-bar-->
+    <script src="./src/js/search-bar.js"></script>
+
+    <!--scrollreveal.js library-->
+    <script src="./src/js/scrollReveal.js"></script> 
 
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
