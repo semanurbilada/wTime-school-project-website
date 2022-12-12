@@ -95,7 +95,7 @@ nav li a:hover{
 .list{
     background-color: white;
     border-radius: 20px;
-    padding: 12px;
+    padding: 15px;
     width: fit-content;
     list-style: none;
     position: absolute;
@@ -155,15 +155,14 @@ nav li a:hover{
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-/*
 /* FIXED ELEMENT 
 .search-bar-fixed input{
     position: fixed;
     z-index: 50;
-    bottom: 25px;
-    left: 20px;
+    bottom: 40px;
+    left: 25px;
     width: 200px;
-    height: 30px;
+    height: 35px;
     text-align: center;
     font-size: 15px;
     border-radius: 25px;
