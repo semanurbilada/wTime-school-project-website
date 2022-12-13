@@ -104,6 +104,11 @@ nav li a:hover{
     /*z-index: 50px;*/
 }
 
+.none,
+.list li a{
+    color: var(--border);
+}
+
 .city-country a{
     text-decoration: none;
 }
