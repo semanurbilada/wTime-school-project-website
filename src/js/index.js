@@ -38,6 +38,7 @@ setDate();
 
 
 /*
+//Digital Clock;
 function currentTime() {
     let date = new Date();
     let h = date.getHours();

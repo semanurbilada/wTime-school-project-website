@@ -2,6 +2,7 @@
 function search() {
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
+    
     let x = document.getElementsByClassName('city-country');
     let y = document.getElementsByClassName('none');
       
@@ -11,7 +12,7 @@ function search() {
         }
         else {
             x[i].style.display = "list-item";  
-            y[i].style.display = "visible";
+            y[i].style.display = "visible"; //i'yi silmeyi dene!
         }
     }
 }

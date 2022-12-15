@@ -2,7 +2,7 @@
 
 function londonTime() {
 
-    constd = new Date();
+    const d = new Date();
     const localTime = d.getTime();
     const localOffset = d.getTimezoneOffset() * 60000;
 
