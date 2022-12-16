@@ -5,10 +5,33 @@ const hourHand = document.querySelector('.hour-hand');
 const currentDay = document.querySelector('.day');
 const currentDate = document.querySelector('.date');
 
+const weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+];
+
+const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
 function setDate() {
     const now = new Date();
-    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
     const seconds = now.getSeconds();
     const secondsDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
@@ -22,22 +45,22 @@ function setDate() {
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
     const date = now.getDate();
-    const month = now.getMonth() + 1;
+    const day = weekdays[now.getDay()];
+    const month = months[now.getMonth()];
     const year = now.getFullYear(); 
-    
-    let day = weekdays[now.getDay()];
 
+    //adding 0 before the single numbers (one line coding)
     if(month < 9) { month = "0" + month; }
 
-    currentDate.innerHTML = date + "/" + month + "/" + year;
-    currentDay.innerHTML = day;
+    currentDate.innerHTML = date + " " + month + " " + year;
+    currentDay.innerHTML = "- " + day;
 }
 
 setInterval(setDate, 1000);
 setDate();
 
 
-/*
+
 //Digital Clock;
 function currentTime() {
     let date = new Date();
@@ -61,11 +84,11 @@ function currentTime() {
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
-    let time = h + ":" + m + ":" + s + " " + period; 
-    document.getElementById("currentClock").innerText = time;
-    document.getElementById("currentClock").textContent = time;
+    let time ="Digital: " + h + ":" + m + ":" + s + " " + period; 
+    document.getElementById("digital-clock").innerText = time;
+    document.getElementById("digital-clock").textContent = time;
 
     setTimeout(currentTime, 1000);
 }
+
 currentTime(); 
-*/

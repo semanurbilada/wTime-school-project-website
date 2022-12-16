@@ -9,7 +9,7 @@
     <title>wTime | what TIME is it?</title>
     <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/scrollreveal"></script> <!-- scrollreveal library -->
+    <script src="https://unpkg.com/scrollreveal"></script><!-- scrollreveal library -->
 </head>
 
 
@@ -63,8 +63,9 @@
                 <!--h1'e exact time class'ı verildi çünkü buton onclick'te değiştirilecek-->
                 <h1 class="exact-time">Your exact time, now:</h1>
                 <div class="current-times">
-                    <div class="date"></div>
-                    <div class="day"></div>
+                    <span class="date"></span>
+                    <span class="day"></span>
+                    <div id="digital-clock" onload="currentTime();"></div>
                 </div>
             </div>
 
@@ -134,13 +135,16 @@
     <footer id="footer">
         <div class="container">
             <div class="content">
-                <span class="logo">
+                <div class="footer-logo">
                     <a href="index.html"><ion-icon name="time-outline"></ion-icon>wTime</a>
-                </span>
+                </div>
                 <p>GMT - Universal Reference</p>
                 <p>Offset - Difference from the Reference</p>
                 <p>UTC - Better Alternative to GMT</p>
-                <p id="about-us">This website using HTML, CSS and JS (dates).</p>
+                <p id="about-us">This website using HTML, CSS and JS => <em><a 
+                    href="https://github.com/semanurbilada/wTime-school-project"
+                    target="_blank">Source code link here, Click!</a></em>
+                </p>
             </div>
             <div class="copyright">
                 <li><i>Copyright © 2022 - wTime<br>All rights reserved.</i></li>
@@ -154,9 +158,9 @@
     <script src="./src/js/london.js"></script><!--london time-->
     <script src="./src/js/dubai.js"></script><!--dubai time-->
 
-    <script src="./src/js/search-bar.js"></script><!--search-bar-->
+    <script src="./src/js/search-bar.js"></script><!--search bar-->
 
-    <script src="./src/js/scrollReveal.js"></script><!--scrollreveal.js library-->
+    <script src="./src/js/scrollReveal.js"></script><!--scrollreveal-->
 
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
