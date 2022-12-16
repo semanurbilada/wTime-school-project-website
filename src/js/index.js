@@ -1,9 +1,9 @@
-const secondHand = document.querySelector('.second-hand');
-const minsHand = document.querySelector('.min-hand');
-const hourHand = document.querySelector('.hour-hand');
-
 const currentDay = document.querySelector('.day');
 const currentDate = document.querySelector('.date');
+
+const hourStick = document.querySelector('.hour-stick');
+const minStick = document.querySelector('.min-stick');
+const secondStick = document.querySelector('.second-stick');
 
 const weekdays = [
     "Sunday",
@@ -30,32 +30,45 @@ const months = [
     "December"
 ];
 
+//Analog Clock & Current Date;
 function setDate() {
+
     const now = new Date();
-    const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds / 60) * 360) + 90;
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
-    const mins = now.getMinutes();
-    const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
-    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
-
+    //Get the current times using local time
     const hour = now.getHours();
-    const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
-    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+    const minute = now.getMinutes();
+    const seconds = now.getSeconds();
 
+    //Rotation calculations
+    //hour * 30 = 360 + ... + 90deg (css)
+    //... = 
+    const hourDegrees = (hour * 30) + (minute/2) + 90;
+    hourStick.style.transform = `rotate(${hourDegrees}deg)`;
+
+    //minutes * 6 = 360 + ... + 90deg (css)
+    //... = second stick position bc minute's depending on second stick
+    const minDegrees = (minute * 6) + (seconds/10) + 90;
+    minStick.style.transform = `rotate(${minDegrees}deg)`;
+
+    //seconds * 6 = 360 + 90deg (css)
+    const secondsDegrees = (seconds * 6) + 90;
+    secondStick.style.transform = `rotate(${secondsDegrees}deg)`;
+    
+
+    //Get the current dates using local time
     const date = now.getDate();
     const day = weekdays[now.getDay()];
     const month = months[now.getMonth()];
     const year = now.getFullYear(); 
 
-    //adding 0 before the single numbers (one line coding)
-    if(month < 9) { month = "0" + month; }
-
+    //outputs
     currentDate.innerHTML = date + " " + month + " " + year;
-    currentDay.innerHTML = "- " + day;
+    currentDay.innerHTML = "- " + day; 
 }
 
+//calling functions;
+//executed repeatedly with every 1 second (1000 milliseconds)
 setInterval(setDate, 1000);
 setDate();
 
@@ -69,26 +82,25 @@ function currentTime() {
     let s = date.getSeconds();
     let period = "AM";
 
-    if(h == 0) {
-        h = 12;
-    }
+    //default period = AM (one line coding)
+    if(h == 0) { h = 12; }
 
-    //converting hours 24 to 12
-    if(h > 12) {
-        h = h - 12;
-        period = "PM";
-    }
+    //converting period to PM & 24 hours to 12 (one line coding)
+    if(h > 12) { h = h - 12; period = "PM"; }
 
     //adding 0 before the single numbers
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;
 
+    //outputs
     let time ="Digital: " + h + ":" + m + ":" + s + " " + period; 
     document.getElementById("digital-clock").innerText = time;
     document.getElementById("digital-clock").textContent = time;
 
+    //executed once with every 1 second (1000 milliseconds)
     setTimeout(currentTime, 1000);
 }
 
-currentTime(); 
+//calling function;
+currentTime();  

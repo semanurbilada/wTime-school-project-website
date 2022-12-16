@@ -161,7 +161,7 @@ nav li a:hover{
     transform: translateY(-3px); 
 }
 
-.hand {
+.stick {
     width: 50%;
     height: 6px;
     background: var(--text);
