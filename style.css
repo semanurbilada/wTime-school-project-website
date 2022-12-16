@@ -83,6 +83,9 @@ nav li a{
 nav li a:hover{
     color: var(--border);
 }
+.active{
+    color: var(--border);
+}
 
 .search-bar input{
     width: 200px;
@@ -132,7 +135,7 @@ nav li a:hover{
     gap: 20px;
 }
 
-.current-date{
+.current-times{
     font-size: 40px;
     display: flex;
     gap: 25px;

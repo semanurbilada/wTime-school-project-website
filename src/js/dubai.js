@@ -3,7 +3,11 @@
 function dubaiTime() { 
     
     const d = new Date();
+
+    //time in miliseconds
     const localTime = d.getTime();
+
+    //converting offset to miliseconds
     const localOffset = d.getTimezoneOffset() * 60000;
      
     const utc = localTime + localOffset;

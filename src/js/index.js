@@ -50,11 +50,13 @@ function currentTime() {
         h = 12;
     }
 
+    //converting hours 24 to 12
     if(h > 12) {
         h = h - 12;
         period = "PM";
     }
 
+    //adding 0 before the single numbers
     h = (h < 10) ? "0" + h : h;
     m = (m < 10) ? "0" + m : m;
     s = (s < 10) ? "0" + s : s;

@@ -3,8 +3,12 @@
 function londonTime() {
 
     const d = new Date();
-    const localTime = d.getTime();
-    const localOffset = d.getTimezoneOffset() * 60000;
+
+    //time in miliseconds
+    const localTime = d.getTime(); 
+
+    //converting offset to miliseconds
+    const localOffset = d.getTimezoneOffset() * 60000; 
 
     const utc = localTime + localOffset;
     const offset = 0; //London's UTC : +00.00
