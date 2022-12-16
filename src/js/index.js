@@ -43,17 +43,17 @@ function setDate() {
     //Rotation calculations
     //hour * 30 = 360 + ... + 90deg (css)
     //... = 
-    const hourDegrees = (hour * 30) + (minute/2) + 90;
-    hourStick.style.transform = `rotate(${hourDegrees}deg)`;
+    const hourDegree = (hour * 30) + (minute/2) + 90;
+    hourStick.style.transform = `rotate(${hourDegree}deg)`;
 
     //minutes * 6 = 360 + ... + 90deg (css)
     //... = second stick position bc minute's depending on second stick
-    const minDegrees = (minute * 6) + (seconds/10) + 90;
-    minStick.style.transform = `rotate(${minDegrees}deg)`;
+    const minDegree = (minute * 6) + (seconds/10) + 90;
+    minStick.style.transform = `rotate(${minDegree}deg)`;
 
     //seconds * 6 = 360 + 90deg (css)
-    const secondsDegrees = (seconds * 6) + 90;
-    secondStick.style.transform = `rotate(${secondsDegrees}deg)`;
+    const secondsDegree = (seconds * 6) + 90;
+    secondStick.style.transform = `rotate(${secondsDegree}deg)`;
     
 
     //Get the current dates using local time
@@ -66,7 +66,6 @@ function setDate() {
     currentDate.innerHTML = date + " " + month + " " + year;
     currentDay.innerHTML = "- " + day; 
 }
-
 //calling functions;
 //executed repeatedly with every 1 second (1000 milliseconds)
 setInterval(setDate, 1000);
@@ -77,30 +76,30 @@ setDate();
 //Digital Clock;
 function currentTime() {
     let date = new Date();
-    let h = date.getHours();
-    let m = date.getMinutes();
-    let s = date.getSeconds();
+    let hour = date.getHours();
+    let minute = date.getMinutes();
+    let seconds = date.getSeconds();
     let period = "AM";
 
     //default period = AM (one line coding)
-    if(h == 0) { h = 12; }
+    if(hour == 0) { hour = 12; }
 
     //converting period to PM & 24 hours to 12 (one line coding)
-    if(h > 12) { h = h - 12; period = "PM"; }
+    if(hour > 12) { hour = hour - 12; period = "PM"; }
 
-    //adding 0 before the single numbers
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
+    //adding 0 before the single numbers with ternary operators:
+    //simpler way to if-else statement
+    hour = (hour < 10) ? "0" + hour : hour;
+    minute = (minute < 10) ? "0" + minute : minute;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
 
     //outputs
-    let time ="Digital: " + h + ":" + m + ":" + s + " " + period; 
+    let time ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
     document.getElementById("digital-clock").innerText = time;
     document.getElementById("digital-clock").textContent = time;
 
     //executed once with every 1 second (1000 milliseconds)
     setTimeout(currentTime, 1000);
 }
-
 //calling function;
 currentTime();  
