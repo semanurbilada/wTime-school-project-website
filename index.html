@@ -60,12 +60,11 @@
     <main class="home">
         <div class="container">
             <div class="info">
-                <!--h1'e exact time class'ı verildi çünkü buton onclick'te değiştirilecek-->
-                <h1 class="exact-time">Your exact time, now:</h1>
-                <div class="current-times">
-                    <span class="date"></span>
-                    <span class="day"></span>
-                    <div id="digital-clock" onload="currentTime();"></div>
+                <h1 id="exact-time">Your exact time, now:</h1>
+                <div class="current-times" id="current-date">
+                    <span class="date" id="d"></span>
+                    <span class="day" id="d"></span>
+                    <div class="digital-clock" id="digital"></div>
                 </div>
             </div>
 
@@ -81,54 +80,22 @@
 
 
     <section class="box" id="clocks"> 
-        <div class="box-item move1">
-            <p><a href="#">LONDON</a></p>
-        </div>
-        <div class="box-item move2">
-            <p><a href="#">PARIS</a></p>
-        </div>
-        <div class="box-item move3">
-            <p><a href="#">DUBAI</a></p>
-        </div>
-        <div class="box-item move4">
-            <p><a href="#">NEW YORK</a></p>
-        </div>
-        <div class="box-item move5">
-            <p><a href="#">SEOUL</a></p>
-        </div>
-        <div class="box-item move6">
-            <p><a href="#">ISTANBUL</a></p>
-        </div>
-        <div class="box-item move7">
-            <p><a href="#">TOKYO</a></p>
-        </div>
-        <div class="box-item move8">
-            <p><a href="#">SINGAPORE</a></p>
-        </div>
-        <div class="box-item move9">
-            <p><a href="#">OSLO</a></p>
-        </div> 
-        <div class="box-item move10">
-            <p><a href="#">AMSTERDAM</a></p>
-        </div>
-        <div class="box-item move11">
-            <p><a href="#">ROME</a></p>
-        </div>
-        <div class="box-item move12">
-            <p><a href="#">BERLIN</a></p>
-        </div>
-        <div class="box-item move13">
-            <p><a href="#">LOS ANGELES</a></p>
-        </div>
-        <div class="box-item move14">
-            <p><a href="#">ANKARA</a></p>
-        </div>
-        <div class="box-item move15">
-            <p><a href="#">TORONTO</a></p>
-        </div>
-        <div class="box-item move16">
-            <p><a href="#">MOSCOW</a></p>
-        </div>
+        <button class="box-item move1" type="button" onclick="londonTime();">LONDON</button>
+        <button class="box-item move2" type="button" onclick="">PARIS</button>
+        <button class="box-item move3" type="button" onclick="dubaiTime();">DUBAI</button>
+        <button class="box-item move4" type="button" onclick=" ">NEW YORK</button>
+        <button class="box-item move5" type="button" onclick=" ">SEOUL</button>
+        <button class="box-item move6" type="button" onclick=" ">ISTANBUL</button>
+        <button class="box-item move7" type="button" onclick=" ">TOKYO</button>
+        <button class="box-item move8" type="button" onclick=" ">SINGAPORE</button>
+        <button class="box-item move9" type="button" onclick=" ">OSLO</button>
+        <button class="box-item move10" type="button" onclick=" ">AMSTERDAM</button>
+        <button class="box-item move11" type="button" onclick=" ">ROME</button>
+        <button class="box-item move12" type="button" onclick=" ">BERLIN</button>
+        <button class="box-item move13" type="button" onclick=" ">LOS ANGELES</button>
+        <button class="box-item move14" type="button" onclick=" ">ANKARA</button>
+        <button class="box-item move15" type="button" onclick=" ">TORONTO</button>
+        <button class="box-item move16" type="button" onclick=" ">MOSCOW</button>
     </section>
 
 
@@ -155,17 +122,27 @@
 
     <!--Js-->
     <script src="./src/js/index.js"></script><!--current time-->
-    <script src="./src/js/london.js"></script><!--london time-->
+    <script src="./src/js/oslo.js"></script><!--oslo time-->
+    <script src="./src/js/rome.js"></script><!--rome time-->
     <script src="./src/js/dubai.js"></script><!--dubai time-->
-
+    <script src="./src/js/paris.js"></script><!--paris time-->
+    <script src="./src/js/seoul.js"></script><!--seoul time-->
+    <script src="./src/js/tokyo.js"></script><!--tokyo time-->
+    <script src="./src/js/ankara.js"></script><!--ankara time-->
+    <script src="./src/js/moscow.js"></script><!--moscow time-->
+    <script src="./src/js/london.js"></script><!--london time-->
+    <script src="./src/js/berlin.js"></script><!--ankara time-->
+    <script src="./src/js/toronto.js"></script><!--toronto time-->
+    <script src="./src/js/istanbul.js"></script><!--istanbul time-->
+    <script src="./src/js/new-york.js"></script><!--new york time-->
+    <script src="./src/js/singapore.js"></script><!--singapore time-->
+    <script src="./src/js/amsterdam.js"></script><!--amsterdam time-->
+    <script src="./src/js/los-ageles.js"></script><!--los angeles time-->
     <script src="./src/js/search-bar.js"></script><!--search bar-->
-
     <script src="./src/js/scrollReveal.js"></script><!--scrollreveal-->
-
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 
 </body>
 </html>

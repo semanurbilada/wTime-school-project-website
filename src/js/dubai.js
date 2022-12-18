@@ -1,5 +1,4 @@
 
-
 function dubaiTime() { 
     
     const now = new Date();
@@ -14,8 +13,7 @@ function dubaiTime() {
     const offset = 4; //Dubai's UTC : +04.00
     const dubai = utc + (3600000 * offset);
      
-    const dubaiTimeNow = new Date(dubai).toLocaleString();
-    console.log(dubaiTimeNow);
+    const dubaiTimeNow = new Date(dubai).toLocaleTimeString();
+    document.getElementById('exact-time').innerText = 'Time in Dubai, now;';
+    document.getElementById("digital").innerText = "Digital => " + dubaiTimeNow;
 }
-
-dubaiTime();

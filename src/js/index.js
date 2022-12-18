@@ -1,5 +1,6 @@
 const currentDay = document.querySelector('.day');
 const currentDate = document.querySelector('.date');
+const time = document.querySelector('.digital-clock');
 
 const hourStick = document.querySelector('.hour-stick');
 const minStick = document.querySelector('.min-stick');
@@ -94,12 +95,10 @@ function currentTime() {
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
     //outputs
-    let time ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
-    document.getElementById("digital-clock").innerText = time;
-    document.getElementById("digital-clock").textContent = time;
+    time.innerHTML ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
 
     //executed once with every 1 second (1000 milliseconds)
     setTimeout(currentTime, 1000);
 }
 //calling function;
-currentTime();  
+currentTime();

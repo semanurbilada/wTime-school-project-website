@@ -19,9 +19,7 @@
     --border: rgb(46, 39, 108);
 }
 
-html{
-    background-color: var(--bg);
-}
+html{ background-color: var(--bg); }
 
 /* NAVBAR */
 header{
@@ -43,7 +41,7 @@ header{
     display: flex;
     align-items: center;
     gap: 2px;
-    margin: 40px;
+    margin: 40px 60px;
     cursor: pointer;
     font-size: 34px;
     color: white;
@@ -54,7 +52,7 @@ header{
 .logo a:hover{
     color: var(--border);
     font-weight: bold;
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 
 nav{
@@ -70,9 +68,7 @@ nav ul{
     font-weight: bold;
 }
 
-nav ul li{
-    list-style: none;
-}
+nav ul li{ list-style: none; }
 
 nav li a{
     color: white;
@@ -80,12 +76,9 @@ nav li a{
     transition: 0.35s;
 }
 
-nav li a:hover{
-    color: var(--border);
-}
-.active{
-    color: var(--border);
-}
+nav li a:hover{ color: var(--border); }
+
+.active{ color: var(--border); }
 
 .search-bar input{
     width: 200px;
@@ -108,13 +101,9 @@ nav li a:hover{
 }
 
 .none,
-.list li a{
-    color: var(--border);
-}
+.list li a{ color: var(--border); }
 
-.city-country a{
-    text-decoration: none;
-}
+.city-country a{ text-decoration: none; }
 
 /* HOME */
 .home{
@@ -134,11 +123,9 @@ nav li a:hover{
     gap: 30px;
 }
 
-.current-times{
-    font-size: 40px;
-    color: var(--border);
-}
+.current-times{ font-size: 40px; color: var(--border);}
 
+/* copy paste starts */
 .current-clock {
     width: 30rem;
     height: 30rem;
@@ -162,7 +149,7 @@ nav li a:hover{
 }
 
 .stick {
-    width: 50%;
+    width: 50%; 
     height: 6px;
     background: var(--text);
     position: absolute;
@@ -172,6 +159,7 @@ nav li a:hover{
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
+/* copy paste ends */
 
 /* CLOCK BOXES */
 .box{
@@ -186,25 +174,18 @@ nav li a:hover{
 }
 
 .box-item{
-    border: solid var(--border);
-    border-width: 3px;
+    border: 3px solid var(--border);
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.box-item p a{
-    text-decoration: none;
     color: var(--border);
     font-size: 22px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
 }
 
-.box-item:hover{
-    border: 5px solid var(--border);
-    box-shadow: 25px 50px 100px -24px;
-}
+.box-item:hover{ border: 5px solid; }
 
 /* FOOTER */
 footer .container{
@@ -225,14 +206,15 @@ footer .container{
     text-decoration: none;
     transition: 0.4s;
 }
+
 .footer-logo a:hover{
     color: var(--border);
     font-weight: bold;
-    transform: scale(0.9);
+    transform: scale(1.1);
 }
 
 .content{
-    background-image: url(./src/images/bg.jpg);
+    background-image: url(./src/images/footer-bg.jpg);
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -244,18 +226,8 @@ footer .container{
     gap: 15px;
 }
 
-#about-us{
-    background-color: var(--navbar);
-    padding: 8px;
-}
+#about-us{ background-color: var(--navbar); padding: 8px; }
 
-.content p a{
-    text-decoration: none;
-    color: white;
-}
+.content p a{ text-decoration: none; color: white; }
 
-.copyright{
-    list-style: none;
-    font-size: 16px;
-    margin: 10px;
-}
+.copyright{ list-style: none; font-size: 16px; margin: 10px; }
