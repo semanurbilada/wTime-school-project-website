@@ -14,7 +14,7 @@
 
 
 <body>
-    <header>
+    <header id="start">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
@@ -37,27 +37,27 @@
     </header>
 
     <ul class="list"> 
-        <li class="city-country"><a href="#">Singapore</a></li>
-        <li class="city-country"><a href="#">Rome / Italy</a></li>
-        <li class="city-country"><a href="#">Seoul / Korea</a></li>
-        <li class="city-country"><a href="#">Tokyo / Japan</a></li>
-        <li class="city-country"><a href="#">Paris / France</a></li>
-        <li class="city-country"><a href="#">Oslo / Norway</a></li>
-        <li class="city-country"><a href="#">Moscow / Russia</a></li>
-        <li class="city-country"><a href="#">Berlin / Germany</a></li>
-        <li class="city-country"><a href="#">Ankara / Turkiye</a></li>
-        <li class="city-country"><a href="#">Toronto / Canada</a></li>
-        <li class="city-country"><a href="#">Istanbul / Turkiye</a></li>
-        <li class="city-country"><a href="#">Amsterdam / Netherlands</a></li>
-        <li class="city-country"><a href="#">London / United Kingdom</a></li> 
-        <li class="city-country"><a href="#">New York / United States</a></li>
-        <li class="city-country"><a href="#">Los Angeles / United States</a></li>
-        <li class="city-country"><a href="#">Dubai / United Arab Emirates</a></li>
-        <li class="none">Nothing found, sorry!</li>
+        <li class="city-country">Singapore</li>
+        <li class="city-country">Rome / Italy</li>
+        <li class="city-country">Seoul / Korea</li>
+        <li class="city-country">Tokyo / Japan</li>
+        <li class="city-country">Paris / France</li>
+        <li class="city-country">Oslo / Norway</li>
+        <li class="city-country">Moscow / Russia</li>
+        <li class="city-country">Berlin / Germany</li>
+        <li class="city-country">Ankara / Turkiye</li>
+        <li class="city-country">Toronto / Canada</li>
+        <li class="city-country">Istanbul / Turkiye</li>
+        <li class="city-country">Amsterdam / Netherlands</li>
+        <li class="city-country" onclick="londonTime();">London / United Kingdom</li> 
+        <li class="city-country">New York / United States</li>
+        <li class="city-country">Los Angeles / United States</li>
+        <li class="city-country">Dubai / United Arab Emirates</li>
+        <!-- <li class="none">Nothing found, sorry!</li> -->
     </ul>
 
 
-    <main class="home">
+    <main class="home" id="home">
         <div class="container">
             <div class="info">
                 <h1 id="exact-time">Your exact time, now:</h1>
@@ -68,12 +68,15 @@
                 </div>
             </div>
 
-            <div class="current-clock">
-                <div class="current-clock-face">
-                  <div class="stick hour-stick"></div>
-                  <div class="stick min-stick"></div>
-                  <div class="stick second-stick"></div>
+            <div class="analog-clock">
+                <div class="current-clock">
+                    <div class="current-clock-face">
+                      <div class="stick hour-stick"></div>
+                      <div class="stick min-stick"></div>
+                      <div class="stick second-stick"></div>
+                    </div>
                 </div>
+                <div><h4>Analog Clock => Current Time!</h4></div>
             </div>
         </div>
     </main>
@@ -83,10 +86,10 @@
         <button class="box-item move1" type="button" onclick="londonTime();">LONDON</button>
         <button class="box-item move2" type="button" onclick="parisTime();">PARIS</button>
         <button class="box-item move3" type="button" onclick="dubaiTime();">DUBAI</button>
-        <button class="box-item move4" type="button" onclick=" ">NEW YORK</button>
-        <button class="box-item move5" type="button" onclick=" ">SEOUL</button>
-        <button class="box-item move6" type="button" onclick=" ">ISTANBUL</button>
-        <button class="box-item move7" type="button" onclick=" ">TOKYO</button>
+        <button class="box-item move4" type="button" onclick="newyorkTime();">NEW YORK</button>
+        <button class="box-item move5" type="button" onclick="seoulTime();">SEOUL</button>
+        <button class="box-item move6" type="button" onclick="istanbulTime();">ISTANBUL</button>
+        <button class="box-item move7" type="button" onclick="tokyoTime();">TOKYO</button>
         <button class="box-item move8" type="button" onclick=" ">SINGAPORE</button>
         <button class="box-item move9" type="button" onclick=" ">OSLO</button>
         <button class="box-item move10" type="button" onclick=" ">AMSTERDAM</button>
@@ -124,7 +127,7 @@
     <script src="./src/js/index.js"></script><!--current time-->
     <script src="./src/js/search-bar.js"></script><!--search bar-->
     <script src="./src/js/scrollReveal.js"></script><!--scrollreveal-->
-    <script src="./src/js/clocks.js"></script><!--different timezones-->
+    <!--<script src="./src/js/clocks.js"></script> different timezones-->
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

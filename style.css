@@ -12,10 +12,8 @@
 
 :root{
     --bg: rgba(102, 102, 237, 0.3);
-    --bg2: rgba(102, 102, 237, 0.4);
     --navbar: rgba(102, 102, 237, 0.7);
     --text: rgba(53, 53, 131, 0.7);
-    --hover: rgba(102, 39, 178, 0.6);
     --border: rgb(46, 39, 108);
 }
 
@@ -100,10 +98,7 @@ nav li a:hover{ color: var(--border); }
     /*z-index: 50px;*/
 }
 
-.none,
-.list li a{ color: var(--border); }
-
-.city-country a{ text-decoration: none; }
+.list li { color: var(--border); cursor: pointer; }
 
 /* HOME */
 .home{
@@ -125,10 +120,15 @@ nav li a:hover{ color: var(--border); }
 
 .current-times{ font-size: 40px; color: var(--border);}
 
+.analog-clock h4{
+    padding: 8px; color: white;
+    background-color: var(--navbar);
+}
+
 /* copy paste starts */
 .current-clock {
-    width: 30rem;
-    height: 30rem;
+    width: 24rem;
+    height: 24rem;
     border: 20px solid white;
     border-radius: 50%;
     margin: 50px auto;
@@ -205,12 +205,6 @@ footer .container{
     color: white;
     text-decoration: none;
     transition: 0.4s;
-}
-
-.footer-logo a:hover{
-    color: var(--border);
-    font-weight: bold;
-    transform: scale(1.1);
 }
 
 .content{
