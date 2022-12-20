@@ -4,7 +4,7 @@ function search() {
     input = input.toLowerCase();
     
     let x = document.getElementsByClassName('city-country');
-    let y = document.getElementsByClassName('none');
+    //let y = document.getElementsByClassName('none');
       
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -12,7 +12,7 @@ function search() {
         }
         else {
             x[i].style.display = "list-item";  
-            y[i].style.display = "visible"; //i'yi silmeyi dene!
+            //y[i].style.display = "visible"; //i'yi silmeyi dene!
         }
     }
 }
