@@ -83,13 +83,41 @@
 
 
     <section class="box" id="clocks"> 
-        <button class="box-item move1" type="button" onclick="londonTime();">LONDON</button>
-        <button class="box-item move2" type="button" onclick="parisTime();">PARIS</button>
-        <button class="box-item move3" type="button" onclick="dubaiTime();">DUBAI</button>
-        <button class="box-item move4" type="button" onclick="newyorkTime();">NEW YORK</button>
-        <button class="box-item move5" type="button" onclick="seoulTime();">SEOUL</button>
-        <button class="box-item move6" type="button" onclick="istanbulTime();">ISTANBUL</button>
-        <button class="box-item move7" type="button" onclick="tokyoTime();">TOKYO</button>
+        <button class="box-item move1"
+            type="button"
+            onclick="londonTime();
+            window.location.href='#start'">LONDON
+        </button>
+
+        <button class="box-item move2" type="button"
+            onclick="parisTime();
+            window.location.href='#start'">PARIS
+        </button>
+
+        <button class="box-item move3" type="button"
+            onclick="dubaiTime();
+            window.location.href='#start'">DUBAI
+        </button>
+
+        <button class="box-item move4" type="button"
+            onclick="newyorkTime();
+            window.location.href='#start'">NEW YORK
+        </button>
+
+        <button class="box-item move5" type="button"
+            onclick="seoulTime();
+            window.location.href='#start'">SEOUL
+        </button>
+
+        <button class="box-item move6" type="button"
+            onclick="istanbulTime();
+            window.location.href='#start'">ISTANBUL
+        </button>
+
+        <button class="box-item move7" type="button"
+            onclick="tokyoTime();
+            window.location.href='#start'">TOKYO
+        </button>
         <button class="box-item move8" type="button" onclick=" ">SINGAPORE</button>
         <button class="box-item move9" type="button" onclick=" ">OSLO</button>
         <button class="box-item move10" type="button" onclick=" ">AMSTERDAM</button>
@@ -127,7 +155,7 @@
     <script src="./src/js/index.js"></script><!--current time-->
     <script src="./src/js/search-bar.js"></script><!--search bar-->
     <script src="./src/js/scrollReveal.js"></script><!--scrollreveal-->
-    <!--<script src="./src/js/clocks.js"></script> different timezones-->
+    <script src="./src/js/clocks.js"></script><!--different timezones-->
     <!--ionicons-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

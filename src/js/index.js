@@ -81,8 +81,9 @@ function currentTime() {
     let seconds = date.getSeconds();
     let period = "AM";
 
-    if(hour == 0) { hour = 12; } //midnight 00 must be 12 (one line coding)
-    if(hour == 12){ hour = 12; period = "PM"; } //noon time period must be PM 
+    //one line coding;
+    if(hour == 0) { hour = 12; } //midnight 00 must be 12 
+    if(hour == 12){ period = "PM"; } //noon time period must be PM 
     if(hour > 12) { hour = hour - 12; period = "PM"; } //converting period to PM & 24 hours to 12
 
     //adding 0 before the single numbers with ternary operators:
@@ -93,26 +94,7 @@ function currentTime() {
 
     //outputs
     time.innerHTML ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
-
 }
 //calling function;
-const exit = setInterval(currentTime, 1000);
+const stopCurrentTime = setInterval(currentTime, 1000);
 currentTime();
-
-
-
-function tokyoTime() { 
-    clearInterval(exit);
-    const now = new Date();
-    const localTime = now.getTime();
-    const localOffset = now.getTimezoneOffset() * 60000;
-    
-    const utc = localTime + localOffset;
-    const offset = 9; //Tokyo's UTC : +09.00
-    const tokyo = utc + (3600000 * offset);
-    
-    //window.location.href = '#start';
-    const tokyoTimeNow = new Date(tokyo).toLocaleTimeString();
-    document.getElementById('exact-time').innerText = 'Time in TOKYO, now;';
-    document.getElementById("digital").innerText = "Digital => " + tokyoTimeNow;
-}
