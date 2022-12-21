@@ -30,31 +30,36 @@
                     <li><a href="#about-us">ABOUT US</a></li>
                 </ul>
                 <div class="search-bar">
-                    <input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="CITY / COUNTRY">
+                    <input id="searchbar" type="text" name="search"
+                        placeholder="CITY / COUNTRY"
+                        value="CITY / COUNTRY" 
+                        onfocus="this.value=''"
+                        onkeyup="search();"
+                    >
                 </div>
             </nav>
         </div>
     </header>
 
-    <ul class="list"> 
-        <li class="city-country">Singapore</li>
-        <li class="city-country">Rome / Italy</li>
-        <li class="city-country">Seoul / Korea</li>
-        <li class="city-country">Tokyo / Japan</li>
-        <li class="city-country">Paris / France</li>
-        <li class="city-country">Oslo / Norway</li>
-        <li class="city-country">Moscow / Russia</li>
-        <li class="city-country">Berlin / Germany</li>
-        <li class="city-country">Ankara / Turkiye</li>
-        <li class="city-country">Toronto / Canada</li>
-        <li class="city-country">Istanbul / Turkiye</li>
-        <li class="city-country">Amsterdam / Netherlands</li>
-        <li class="city-country" onclick="londonTime();">London / United Kingdom</li> 
-        <li class="city-country">New York / United States</li>
-        <li class="city-country">Los Angeles / United States</li>
-        <li class="city-country">Dubai / United Arab Emirates</li>
-        <!-- <li class="none">Nothing found, sorry!</li> -->
-    </ul>
+    <div class="list" id="list"> 
+        <li class="city-country" id="option">Singapore</li>
+        <li class="city-country" id="option">Rome / Italy</li>
+        <li class="city-country" id="option">Seoul / Korea</li>
+        <li class="city-country" id="option" onclick="setTime('tokyo');">Tokyo / Japan</li>
+        <li class="city-country" id="option">Paris / France</li>
+        <li class="city-country" id="option">Oslo / Norway</li>
+        <li class="city-country" id="option">Moscow / Russia</li>
+        <li class="city-country" id="option">Berlin / Germany</li>
+        <li class="city-country" id="option">Ankara / Turkiye</li>
+        <li class="city-country" id="option">Toronto / Canada</li>
+        <li class="city-country" id="option" onclick="setTime('istanbul');">Istanbul / Turkiye</li>
+        <li class="city-country" id="option">Amsterdam / Netherlands</li>
+        <li class="city-country" id="option" onclick="setTime('london');">London / United Kingdom</li> 
+        <li class="city-country" id="option">New York / United States</li>
+        <li class="city-country" id="option">Los Angeles / United States</li>
+        <li class="city-country" id="option">Dubai / United Arab Emirates</li>
+        <div><li class="none" id="none">Nothing found, sorry!</li></div>
+    </div>
 
 
     <main class="home" id="home">
@@ -83,41 +88,13 @@
 
 
     <section class="box" id="clocks"> 
-        <button class="box-item move1"
-            type="button"
-            onclick="londonTime();
-            window.location.href='#start'">LONDON
-        </button>
-
-        <button class="box-item move2" type="button"
-            onclick="parisTime();
-            window.location.href='#start'">PARIS
-        </button>
-
-        <button class="box-item move3" type="button"
-            onclick="dubaiTime();
-            window.location.href='#start'">DUBAI
-        </button>
-
-        <button class="box-item move4" type="button"
-            onclick="newyorkTime();
-            window.location.href='#start'">NEW YORK
-        </button>
-
-        <button class="box-item move5" type="button"
-            onclick="seoulTime();
-            window.location.href='#start'">SEOUL
-        </button>
-
-        <button class="box-item move6" type="button"
-            onclick="istanbulTime();
-            window.location.href='#start'">ISTANBUL
-        </button>
-
-        <button class="box-item move7" type="button"
-            onclick="tokyoTime();
-            window.location.href='#start'">TOKYO
-        </button>
+        <button class="box-item move1" type="button" onclick="setTime('london');">LONDON</button>
+        <button class="box-item move2" type="button" onclick="setTime('paris');">PARIS</button>
+        <button class="box-item move3" type="button" onclick="setTime('dubai');">DUBAI</button>
+        <button class="box-item move4" type="button" onclick="setTime('new_york');">NEW YORK</button>
+        <button class="box-item move5" type="button" onclick="setTime('seoul');">SEOUL</button>
+        <button class="box-item move6" type="button" onclick="setTime('istanbul');">ISTANBUL</button>
+        <button class="box-item move7" type="button" onclick="setTime('tokyo');">TOKYO</button>
         <button class="box-item move8" type="button" onclick=" ">SINGAPORE</button>
         <button class="box-item move9" type="button" onclick=" ">OSLO</button>
         <button class="box-item move10" type="button" onclick=" ">AMSTERDAM</button>
@@ -127,6 +104,7 @@
         <button class="box-item move14" type="button" onclick=" ">ANKARA</button>
         <button class="box-item move15" type="button" onclick=" ">TORONTO</button>
         <button class="box-item move16" type="button" onclick=" ">MOSCOW</button>
+        <button class="box-item move17" type="button" onclick=" ">Go Back to Current Time!</button>
     </section>
 
 

@@ -15,7 +15,7 @@ const weekdays = [
     "Friday",
     "Saturday"
 ];
-
+/*
 const months = [
     "January",
     "February",
@@ -29,7 +29,7 @@ const months = [
     "October",
     "November",
     "December"
-];
+];*/
 
 //Analog Clock & Current Date;
 function setDate() {
@@ -59,12 +59,12 @@ function setDate() {
     //Get the current dates using local time
     const date = now.getDate();
     const day = weekdays[now.getDay()];
-    const month = months[now.getMonth()];
+    const month = now.getMonth()+1;  //(0 - 11)
     const year = now.getFullYear(); 
 
     //outputs
-    currentDate.innerHTML = date + " " + month + " " + year;
-    currentDay.innerHTML = "- " + day; 
+    currentDate.innerHTML =date + "/" + month + "/" + year;
+    currentDay.innerHTML = "- " + day;  
 }
 //calling functions;
 //executed repeatedly with every 1 second (1000 milliseconds)
@@ -95,6 +95,7 @@ function currentTime() {
     //outputs
     time.innerHTML ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
 }
-//calling function;
+//
+
 const stopCurrentTime = setInterval(currentTime, 1000);
 currentTime();
