@@ -1,21 +1,90 @@
 
+
+document.getElementById('searchbar').onclick = function() {showList()};
+document.getElementById('list').onclick = function() {showList()};
+
+
+function showList() {
+    document.getElementById('list').classList.toggle("show");   
+    search();
+    console.log("showing")
+}
+
+
 function search() {
+    console.log("searching")
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
     
     let x = document.getElementsByClassName('city-country');
-    //let y = document.getElementsByClassName('none');
       
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
             x[i].style.display = "none";
+            console.log("if")
         }
         else {
             x[i].style.display = "list-item";  
-            //y[i].style.display = "visible"; //i'yi silmeyi dene!
+            console.log("else")
         }
     }
-}
+} 
+
+
+/*
+input.onclick = function show() {
+    let showList = document.getElementById('list');
+    if (showList.style.display !== 'none') {
+        showList.style.display = 'list-item';
+        console.log("showing list")
+    }
+};
+/*
+input.onblur = function() {
+    let hideList = document.getElementById('list');
+    if (hideList.style.display === 'list-item') {
+        hideList.style.display = 'none';
+        console.log("hiding list")
+    }
+};
+*/
+
+
+/*
+let input = document.getElementById('searchbar'); 
+input.onclick = function() {
+    var div = document.getElementById('list');
+    
+    if (div.style.display === 'none') {
+        div.style.display = 'list-item';
+        console.log("if")
+    }
+    else if(div.style.display !== 'none') {
+        div.style.display = 'list-item';
+        console.log("else if")
+    }
+    else{
+        div.style.display == 'none'
+        console.log("else")
+    }
+};
+*/
+
+
+/* 
+var input = document.getElementById('searchbar'); 
+input.onclick = function() {
+    var div = document.getElementById('list');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};*/
+
+
+
 // Nothing found eklendi ancak search optimization çok stabil çalışmıyor ama çalışıyor!
 
 /*

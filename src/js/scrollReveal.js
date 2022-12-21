@@ -1,5 +1,5 @@
 
-// Clock's boxes;
+// Clock's boxes; (buttons)
 
 ScrollReveal().reveal('.move1',{delay:250});
 ScrollReveal().reveal('.move2',{delay:500});
@@ -18,3 +18,4 @@ ScrollReveal().reveal('.move13',{delay:1000});
 ScrollReveal().reveal('.move14',{delay:750});
 ScrollReveal().reveal('.move15',{delay:500});
 ScrollReveal().reveal('.move16',{delay:250});
+ScrollReveal().reveal('.move17',{delay:2500});
