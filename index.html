@@ -42,22 +42,22 @@
     </header>
 
     <div class="list" id="list"> 
-        <li class="city-country" id="option">Singapore</li>
-        <li class="city-country" id="option">Rome / Italy</li>
-        <li class="city-country" id="option">Seoul / Korea</li>
+        <li class="city-country" id="option" onclick="setTime('singapore')">Singapore</li>
+        <li class="city-country" id="option" onclick="setTime('rome')">Rome / Italy</li>
+        <li class="city-country" id="option" onclick="setTime('seoul')">Seoul / Korea</li>
         <li class="city-country" id="option" onclick="setTime('tokyo');">Tokyo / Japan</li>
-        <li class="city-country" id="option">Paris / France</li>
-        <li class="city-country" id="option">Oslo / Norway</li>
-        <li class="city-country" id="option">Moscow / Russia</li>
-        <li class="city-country" id="option">Berlin / Germany</li>
-        <li class="city-country" id="option">Ankara / Turkiye</li>
-        <li class="city-country" id="option">Toronto / Canada</li>
+        <li class="city-country" id="option" onclick="setTime('paris')">Paris / France</li>
+        <li class="city-country" id="option" onclick="setTime('oslo')">Oslo / Norway</li>
+        <li class="city-country" id="option" onclick="setTime('moscow')">Moscow / Russia</li>
+        <li class="city-country" id="option" onclick="setTime('berlin')">Berlin / Germany</li>
+        <li class="city-country" id="option" onclick="setTime('ankara')">Ankara / Turkiye</li>
+        <li class="city-country" id="option" onclick="setTime('toronto')">Toronto / Canada</li>
         <li class="city-country" id="option" onclick="setTime('istanbul');">Istanbul / Turkiye</li>
-        <li class="city-country" id="option">Amsterdam / Netherlands</li>
+        <li class="city-country" id="option" onclick="setTime('amsterdam')">Amsterdam / Netherlands</li>
         <li class="city-country" id="option" onclick="setTime('london');">London / United Kingdom</li> 
-        <li class="city-country" id="option">New York / United States</li>
-        <li class="city-country" id="option">Los Angeles / United States</li>
-        <li class="city-country" id="option">Dubai / United Arab Emirates</li>
+        <li class="city-country" id="option" onclick="setTime('new_york')">New York / United States</li>
+        <li class="city-country" id="option" onclick="setTime('los_angeles')">Los Angeles / United States</li>
+        <li class="city-country" id="option" onclick="setTime('dubai')">Dubai / United Arab Emirates</li>
         <div><li class="none" id="none">Nothing found, sorry!</li></div>
     </div>
 
@@ -65,7 +65,7 @@
     <main class="home" id="home">
         <div class="container">
             <div class="info">
-                <h1 id="exact-time">Your exact time, now:</h1>
+                <h1 id="exact-time">Your exact time, now;</h1>
                 <div class="current-times" id="current-date">
                     <span class="date" id="d"></span>
                     <span class="day" id="d"></span>
@@ -104,7 +104,7 @@
         <button class="box-item move14" type="button" onclick="setTime('ankara');">ANKARA</button>
         <button class="box-item move15" type="button" onclick="setTime('toronto');">TORONTO</button>
         <button class="box-item move16" type="button" onclick="setTime('moscow');">MOSCOW</button>
-        <button class="box-item move17" type="button" onclick=" ">Go Back to Current Time!</button>
+        <button class="box-item move17" type="button" id="go-back" onclick="setTime();" >Go Back to Current Time!</button>
     </section>
 
 

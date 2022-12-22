@@ -18,13 +18,14 @@ const offsets = {
 };
   
 let activeInterval;
-  
 let activeTime = "current";
   
 const setTime = (city) => {
+    window.location.href = "#start";  
     activeTime === "current" ? clearInterval(stopCurrentTime) : clearInterval(activeInterval);
+    console.log('clear')
 
-    activeInterval = setInterval(function () {
+    activeInterval = setInterval(function() {
         activeTime = city;
         const now = new Date();
 
@@ -43,8 +44,17 @@ const setTime = (city) => {
         document.getElementById("digital").innerText = "Digital => " + cityTimeNow;
         console.log("working", city);
     }, 1000);
+    console.log("working2");    
 
-    console.log("working2", city);
-  
-    window.location.href = "#start";
-};
+
+    //Offset value of UTC doesn't exist
+    document.getElementById("go-back").onclick = () => {
+        console.log("if");    
+        window.location.href = "#start";
+
+        clearInterval(activeInterval);  
+        document.getElementById("exact-time").innerText = "Your exact time, now;"
+        activeInterval = setInterval(function() {currentTime()}, 1000);
+    };
+
+}

@@ -187,7 +187,16 @@ nav li a:hover{ color: var(--border); }
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.3);
 }
 
-.box-item:hover{ border: 5px solid; }
+#go-back{
+    
+    background-color: var(--border);
+    border-color: var(--border);
+    padding: 12px;
+    color: #e7d7ff;
+    font-size: 24px;
+}
+
+.box-item:hover{ border: 6px solid; }
 
 /* FOOTER */
 footer .container{
