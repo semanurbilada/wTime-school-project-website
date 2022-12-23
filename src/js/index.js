@@ -15,7 +15,7 @@ const weekdays = [
     "Friday",
     "Saturday"
 ];
-/*
+
 const months = [
     "January",
     "February",
@@ -29,9 +29,9 @@ const months = [
     "October",
     "November",
     "December"
-];*/
+];
 
-//Analog Clock & Current Date;
+//Analog Clock (Current Time);
 function setDate() {
     const now = new Date();
 
@@ -42,7 +42,6 @@ function setDate() {
 
     //Rotation calculations
     //hour * 30 = 360 + ... + 90deg (css)
-    //... = 
     const hourDegree = (hour * 30) + (minute/2) + 90;
     hourStick.style.transform = `rotate(${hourDegree}deg)`;
 
@@ -54,17 +53,6 @@ function setDate() {
     //seconds * 6 = 360 + 90deg (css)
     const secondsDegree = (seconds * 6) + 90;
     secondStick.style.transform = `rotate(${secondsDegree}deg)`;
-    
-
-    //Get the current dates using local time
-    const date = now.getDate();
-    const day = weekdays[now.getDay()];
-    const month = now.getMonth()+1;  //(0 - 11)
-    const year = now.getFullYear(); 
-
-    //outputs
-    currentDate.innerHTML =date + "/" + month + "/" + year;
-    currentDay.innerHTML = "- " + day;  
 }
 //calling functions;
 //executed repeatedly with every 1 second (1000 milliseconds)
@@ -73,18 +61,28 @@ setDate();
 
 
 
-//Digital Clock;
+//Digital Clock & Current Date;
 function currentTime() {
-    let date = new Date();
-    let hour = date.getHours();
-    let minute = date.getMinutes();
-    let seconds = date.getSeconds();
+    let clock = new Date();
+    let hour = clock.getHours();
+    let minute = clock.getMinutes();
+    let seconds = clock.getSeconds();
     let period = "AM";
 
-    //one line coding;
-    if(hour == 0) { hour = 12; } //midnight 00 must be 12 
-    if(hour == 12){ period = "PM"; } //noon time period must be PM 
-    if(hour > 12) { hour = hour - 12; period = "PM"; } //converting period to PM & 24 hours to 12
+    let date = clock.getDate(); //day in number
+    let month = months[clock.getMonth()]; //month in string
+    let year = clock.getFullYear(); //year in number
+    let day = weekdays[clock.getDay()]; //day in string
+
+    if (hour === 0) {
+        hour = 12;
+        period = "AM";
+    } 
+
+    if (hour > 12) {
+        hour = hour - 12;
+        period = "PM";
+    } //converting period to PM & 24 hours to 12
 
     //adding 0 before the single numbers with ternary operators:
     //simpler way to if-else statement
@@ -94,8 +92,9 @@ function currentTime() {
 
     //outputs
     time.innerHTML ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
+    currentDate.innerHTML = date + " " + month + " " + year;
+    currentDay.innerHTML = day + ", ";
 }
-//
-
+//variable declaration for using clearInterval later
 const stopCurrentTime = setInterval(currentTime, 1000);
-currentTime();
+currentTime();  

@@ -16,6 +16,13 @@ const offsets = {
     seoul: 9,
     tokyo: 9,
 };
+
+const options = {
+    weekday: 'long',
+    month: 'long',
+    year: 'numeric',
+    day: 'numeric'
+}; 
   
 let activeInterval;
 let activeTime = "current";
@@ -39,22 +46,28 @@ const setTime = (city) => {
         const offset = offsets[city];
         const cityTime = utc + (3600000 * offset);
   
-        const cityTimeNow = new Date(cityTime).toLocaleString();
+        //current time zone changing (digital-clock)
+        const cityTimeNow = new Date(cityTime).toLocaleTimeString();
         document.getElementById("exact-time").innerText = `Time in ${city.toLocaleUpperCase()}, now;`;
         document.getElementById("digital").innerText = "Digital => " + cityTimeNow;
         console.log("working", city);
+
+        //current date - day changing
+        const cityDateNow = new Date(cityTime).toLocaleDateString('en-GB', options);
+        document.getElementById("date").innerHTML = cityDateNow;
+        document.getElementById("day").style.display = 'none';
     }, 1000);
-    console.log("working2");    
 
 
-    //Offset value of UTC doesn't exist
+    //Offset value of UTC doesn't exist (go-back to current time button)
     document.getElementById("go-back").onclick = () => {
-        console.log("if");    
         window.location.href = "#start";
 
         clearInterval(activeInterval);  
-        document.getElementById("exact-time").innerText = "Your exact time, now;"
         activeInterval = setInterval(function() {currentTime()}, 1000);
-    };
 
+        //outputs
+        document.getElementById("exact-time").innerText = "Your exact time, now;"
+        document.getElementById("day").style.display = 'inline';
+    };
 }
