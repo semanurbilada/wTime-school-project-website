@@ -1,4 +1,3 @@
-const currentDay = document.querySelector('.day');
 const currentDate = document.querySelector('.date');
 const time = document.querySelector('.digital-clock');
 
@@ -91,9 +90,8 @@ function currentTime() {
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
     //outputs
+    currentDate.innerHTML = day + ", " + date + " " + month + " " + year;
     time.innerHTML ="Digital => " + hour + ":" + minute + ":" + seconds + " " + period; 
-    currentDate.innerHTML = date + " " + month + " " + year;
-    currentDay.innerHTML = day + ", ";
 }
 //variable declaration for using clearInterval later
 const stopCurrentTime = setInterval(currentTime, 1000);

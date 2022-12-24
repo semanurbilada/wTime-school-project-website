@@ -30,7 +30,6 @@ let activeTime = "current";
 const setTime = (city) => {
     window.location.href = "#start";  
     activeTime === "current" ? clearInterval(stopCurrentTime) : clearInterval(activeInterval);
-    console.log('clear')
 
     activeInterval = setInterval(function() {
         activeTime = city;
@@ -46,16 +45,15 @@ const setTime = (city) => {
         const offset = offsets[city];
         const cityTime = utc + (3600000 * offset);
   
+        //outputs
+        //current date - day changing
+        const cityDateNow = new Date(cityTime).toLocaleDateString('en-GB', options);
+        document.getElementById("date").innerHTML = cityDateNow;
+        
         //current time zone changing (digital-clock)
         const cityTimeNow = new Date(cityTime).toLocaleTimeString();
         document.getElementById("exact-time").innerText = `Time in ${city.toLocaleUpperCase()}, now;`;
         document.getElementById("digital").innerText = "Digital => " + cityTimeNow;
-        console.log("working", city);
-
-        //current date - day changing
-        const cityDateNow = new Date(cityTime).toLocaleDateString('en-GB', options);
-        document.getElementById("date").innerHTML = cityDateNow;
-        document.getElementById("day").style.display = 'none';
     }, 1000);
 
 
@@ -68,6 +66,5 @@ const setTime = (city) => {
 
         //outputs
         document.getElementById("exact-time").innerText = "Your exact time, now;"
-        document.getElementById("day").style.display = 'inline';
     };
 }
