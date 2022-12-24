@@ -1,7 +1,7 @@
 
 
-document.getElementById('searchbar').onclick = function() {showList()};
 document.getElementById('list').onclick = function() {showList()};
+document.getElementById('searchbar').onclick = function() {showList()};
 
 
 function showList() {

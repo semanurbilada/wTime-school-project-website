@@ -58,7 +58,10 @@ const setTime = (city) => {
 
 
     //go back button shows up when the user clicks on the other buttons
-    document.getElementById('clocks').onclick = function() {
+    document.getElementById('list').onclick = function() {showButton()};
+    document.getElementById('clocks').onclick = function() {showButton()};
+    
+    function showButton() {
         document.getElementById("go-back").style.display = "block";
     };
 
