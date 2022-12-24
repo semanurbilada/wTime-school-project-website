@@ -57,6 +57,12 @@ const setTime = (city) => {
     }, 1000);
 
 
+    //go back button shows up when the user clicks on the other buttons
+    document.getElementById('clocks').onclick = function() {
+        document.getElementById("go-back").style.display = "block";
+    };
+
+
     //Offset value of UTC doesn't exist (go-back to current time button)
     document.getElementById("go-back").onclick = () => {
         window.location.href = "#start";
@@ -64,7 +70,7 @@ const setTime = (city) => {
         clearInterval(activeInterval);  
         activeInterval = setInterval(function() {currentTime()}, 1000);
 
-        //outputs
+        //output
         document.getElementById("exact-time").innerText = "Your exact time, now;"
     };
 }

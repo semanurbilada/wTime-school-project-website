@@ -98,9 +98,9 @@ nav li a:hover{ color: var(--border); }
     font-size: 17px;
 }
 
-.list li { color: var(--border); cursor: pointer; }
-.none { display: none; }
-.show {display: list-item;}
+.list li{ color: var(--border); cursor: pointer; }
+.none{ display: none; }
+.show{display: list-item;}
 
 /* HOME */
 .home .container {
@@ -189,6 +189,7 @@ nav li a:hover{ color: var(--border); }
 }
 
 #go-back{
+    display: none;
     background-color: var(--border);
     border-color: var(--border);
     padding: 12px;
