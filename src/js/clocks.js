@@ -66,7 +66,7 @@ const setTime = (city) => {
     };
 
 
-    //Offset value of UTC doesn't exist (go-back to current time button)
+    //Current time's offset value doesn't exist (go-back to current time button)
     document.getElementById("go-back").onclick = () => {
         window.location.href = "#start";
 
