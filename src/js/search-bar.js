@@ -16,8 +16,11 @@ function search() {
     input = input.toLowerCase();
     
     let x = document.getElementsByClassName('city-country');
+
+    //optimization
+    const max = x.length;
       
-    for (i = 0; i < x.length; i++) { 
+    for (let i = 0; i < max; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
             x[i].style.display = "none";
             continue;   
